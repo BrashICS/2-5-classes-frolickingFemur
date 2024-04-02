@@ -15,14 +15,11 @@ class Circle{
     name = "Circle";
     radius = 1;
 
-
     area(){
-        console.log((Math.PI * (this.radius ** 2)));
         return ((2 * Math.PI * (this.radius ** 2)));
     }
 
-    circ(){
-        console.log(2 * Math.PI * this.radius);
+    circumference(){
         return (2 * Math.PI * this.radius);
     }
 }
@@ -31,6 +28,21 @@ class Rectangle{
     name= "Rectangle";
     length = 1;
     width = 1;
+
+    area(){
+        return (this.width * this.length);
+    }
+
+    perimeter(){
+        return ((2*this.length) + (2*this.width));
+    }
+
+    is_square(){
+        if (this.length == this.width){
+            return true;
+        }
+        return false;
+    }
 }
 
 class Vehicle{
@@ -41,7 +53,3 @@ class Vehicle{
     fuel='';
     can_fly= false;
 }
-
-let newCirc = new Circle();
-newCirc.radius = 3;
-newCirc.circ();
